@@ -18,30 +18,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Check if newQuoteButton exists and fetch a quote
-    const newQuoteButton = document.getElementById('newQuoteButton');
-    if (newQuoteButton) {
-        const api_url = "https://zenquotes.io/api/random/";
+document.addEventListener('DOMContentLoaded', function() {
+    // Use your Glitch project URL here
+    const api_url = "https://your-project-name.glitch.me/https://zenquotes.io/api/random/";
 
-        async function fetchQuote() {
-            try {
-                const response = await fetch(api_url);
-                const quotes = await response.json();
-                if (quotes.length > 0) {
-                    document.getElementById('quote').textContent = `"${quotes[0].q}"`;
-                    document.getElementById('author').textContent = `- ${quotes[0].a}`;
-                }
-            } catch (error) {
-                console.error('Failed to fetch quote:', error);
-                document.getElementById('quote').textContent = 'Failed to load quote.';
+    async function fetchQuote() {
+        try {
+            const response = await fetch(api_url);
+            const quotes = await response.json();
+            if (quotes.length > 0) {
+                document.getElementById('quote').textContent = `"${quotes[0].q}"`;
+                document.getElementById('author').textContent = `- ${quotes[0].a}`;
             }
+        } catch (error) {
+            console.error('Failed to fetch quote:', error);
+            document.getElementById('quote').textContent = 'Failed to load quote.';
         }
-
-        newQuoteButton.addEventListener('click', fetchQuote);
-
-        // Fetch a new quote when the page loads
-        fetchQuote();
     }
+
+    document.getElementById('newQuoteButton').addEventListener('click', fetchQuote);
+
+    // Fetch a new quote when the page loads
+    fetchQuote();
+});
+
 });
 
 
