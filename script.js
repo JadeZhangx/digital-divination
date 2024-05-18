@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Use your Glitch project URL here
-    const api_url = "https://your-project-name.glitch.me/https://zenquotes.io/api/random/";
+    const api_url = "https://digital-divination.glitch.me/https://zenquotes.io/api/random/";
 
     async function fetchQuote() {
         try {
