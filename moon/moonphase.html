@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Moon Phase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Your Moon Phase</h1>
+    </header>
+    <main>
+        <p>You described the moon as: <span id="userDescription"></span></p>
+        <!-- Placeholder for moon phase; in practice, you might fetch this data based on the input -->
+        <p>The actual moon phase is: <span id="moonPhase">Waxing Crescent</span></p>
+        <button id="quoteButton" onclick="location.href='quote.html';">What does the moon speak to me?</button>
+        <link rel="stylesheet" href="quote.css">
+
+    </main>
+    <script>
+        document.getElementById('userDescription').textContent = localStorage.getItem('userMoonObservation');
+    </script>
+</body>
+</html>
